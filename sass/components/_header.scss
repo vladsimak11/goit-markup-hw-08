@@ -1,0 +1,160 @@
+/* Header */
+
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &-blocks {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo-text {
+    color: #000000;
+  }
+
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: $link-color;
+
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+
+.main-nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+
+  &__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    
+    &:not(:last-child) {
+      margin-right: $gap-50;
+    }
+
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: $title-color;
+    transition: color $transition-duration $transition-timing;
+
+    &:hover, &:focus {
+      color: $link-color;
+    }
+
+  }
+
+  &__link--active {
+    &::after {
+      content: "";
+    
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      display: block;
+    
+      background-color: $link-color;
+      border-radius: 2px;
+    }
+  }
+  
+}
+
+.active {
+  color: $link-color;
+}
+
+.contacts {
+  display: none;
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+
+  &__item {
+  color: $text-color;
+  transition: color $transition-duration $transition-timing;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: 10px;
+    
+    @media screen and (max-width: $only-desktop) {
+      margin-right: 8px;
+    }
+    }
+
+  &__item { 
+
+    &:not(:last-child) {
+    margin-right: 40px;
+
+    @media screen and (max-width: $only-desktop) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    }
+
+    &:hover, &:focus {
+      color: $link-color;
+    }
+  
+  }
+
+}
+
+

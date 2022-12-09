@@ -1,0 +1,72 @@
+/* Clients */
+
+.clients {
+  padding-top: $gap-60;
+  padding-bottom: $gap-60;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: $gap-94;
+    padding-bottom: $gap-94;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  
+    color: $title-color;
+  
+    font-weight: 700;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 30px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+  
+    transition: color $transition-duration $transition-timing,
+      background-color $transition-duration $transition-timing;
+
+    @media screen and (min-width: $tablet) {
+      width: 226px;
+    } 
+    
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    } 
+
+    &:hover, &:focus {
+      color: $link-color;
+      border-color: $link-color;
+      }  
+  }
+
+  &__icon{
+    fill: currentColor;
+  }
+
+}
