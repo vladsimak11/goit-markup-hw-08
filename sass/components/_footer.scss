@@ -148,7 +148,7 @@
   &__input {
     margin-bottom: 20px;
     display: inline-block;
-    width: 450px;
+    width: 290px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -157,6 +157,10 @@
     color: $white-color;
     padding: 0;
     padding-left: 16px;
+
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
 
     @media screen and (min-width: $desktop) {
       width: 358px;
